@@ -16,10 +16,12 @@ enable_testing()
 # Targets
 ################################
 
-add_executable(hello_world src/main.cpp)
+add_executable(calculator_app src/calculator.cpp src/main.cpp )
+target_include_directories(calculator_app PUBLIC include)
 
-add_executable(test_one tests/test_one.cpp)
-target_link_libraries(test_one PUBLIC gtest ${CMAKE_THREAD_LIBS_INIT})
-add_test(test_one test_one)
+add_executable(test_calculator tests/test_calculator.cpp src/calculator.cpp)
+target_link_libraries(test_calculator PUBLIC gtest ${CMAKE_THREAD_LIBS_INIT})
+target_include_directories(test_calculator PUBLIC include)
+add_test(test_calculator test_calculator)
 
 

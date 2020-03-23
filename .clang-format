@@ -1,0 +1,15 @@
+BasedOnStyle: LLVM
+AccessModifierOffset: -2
+AllowShortFunctionsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBraces: Allman
+ColumnLimit: 120
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IndentWidth: 4
+MaxEmptyLinesToKeep: 3
+NamespaceIndentation: All
+PointerAlignment: Left
+SortIncludes: false
+TabWidth: 4
