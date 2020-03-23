@@ -1,3 +1,6 @@
+#ifndef _CALCULATOR_H_
+#define _CALCULATOR_H_
+
 namespace googletest_tutorial
 {
     class Calculator
@@ -14,3 +17,5 @@ namespace googletest_tutorial
         double divide(double x, double y);
     };
 } // namespace googletest_tutorial
+
+#endif
