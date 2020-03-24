@@ -29,6 +29,11 @@ target_link_libraries(test_calculator_parameterized PUBLIC gtest ${CMAKE_THREAD_
 target_include_directories(test_calculator_parameterized PUBLIC include)
 add_test(test_calculator_parameterized test_calculator_parameterized)
 
+add_executable(test_calculator_fixture tests/test_calculator_fixture.cpp src/calculator.cpp)
+target_link_libraries(test_calculator_fixture PUBLIC gtest ${CMAKE_THREAD_LIBS_INIT})
+target_include_directories(test_calculator_fixture PUBLIC include)
+add_test(test_calculator_fixture test_calculator_fixture)
+
 add_executable(test_sample1 tests/sample1_unittest.cc src/sample1.cc)
 target_link_libraries(test_sample1 PUBLIC gtest ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(test_sample1 PUBLIC include)
