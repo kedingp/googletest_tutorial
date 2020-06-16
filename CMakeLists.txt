@@ -87,3 +87,7 @@ add_test(test_sample10 test_sample10)
 add_executable(test_parameterized tests/test_parameterized.cpp)
 target_link_libraries(test_parameterized PUBLIC gtest gtest_main)
 add_test(test_parameterized test_parameterized)
+
+add_executable(test_minimal_mock tests/test_minimal_mock.cpp)
+target_link_libraries(test_minimal_mock PUBLIC gmock gtest gtest_main)
+add_test(test_minimal_mock test_minimal_mock)
