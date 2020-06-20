@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(googletest_tutorial VERSION 1.0
-                            LANGUAGES CXX)
+        LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -9,16 +9,14 @@ set(CMAKE_CXX_STANDARD 14)
 # GTest
 ################################
 enable_testing()
-include(GoogleTest)
-add_subdirectory(extern/googletest)
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-
+add_subdirectory(extern/googletest)
 
 ################################
 # Targets
 ################################
 
-add_executable(calculator_app src/calculator.cpp src/main.cpp )
+add_executable(calculator_app src/calculator.cpp src/main.cpp)
 target_include_directories(calculator_app PUBLIC include)
 
 add_executable(test_calculator tests/test_calculator.cpp src/calculator.cpp)
