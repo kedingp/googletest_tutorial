@@ -5,11 +5,16 @@ project(googletest_tutorial VERSION 1.0
 
 set(CMAKE_CXX_STANDARD 14)
 
+if (CMAKE_COMPILER_IS_GNUCXX)
+    message("Build with coverage tools")
+    set(CMAKE_CXX_FLAGS "--coverage")
+endif ()
+
 ################################
 # GTest
 ################################
 enable_testing()
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+set(gtest_force_shared_crt ON CACHE BOOL " " FORCE)
 add_subdirectory(extern/googletest)
 
 ################################
